@@ -34,7 +34,7 @@ class Bankbank
         dep=s.nextDouble();
         
         bal=bal+dep;
-        
+        //change ker naa
     }
     
      void withdraw()
