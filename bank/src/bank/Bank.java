@@ -1,7 +1,6 @@
 
 package bank;
 
-import java.io.*;
 import java.util.*;
 
 /**
@@ -11,14 +10,14 @@ import java.util.*;
 class Bankbank
 {
     
-    double dep,wid,bal;
+    double dep_amount,wid_amount,balance;
     
     Scanner s= new Scanner(System.in);
     Bankbank()
     {
        
-        dep=wid=0;
-        bal=500;
+        dep_amount=wid_amount=0;
+        balance=500;
         
     }
     
@@ -31,28 +30,28 @@ class Bankbank
     {
         
         System.out.println("Enter the amount to be deposited");
-        dep=s.nextDouble();
+        dep_amount=s.nextDouble();
         
-        bal=bal+dep;
-        //change ker naa
+        balance=balance+dep_amount;
+       
     }
     
      void withdraw()
     {
         System.out.println("Enter the amount to be withdrawn");
-        wid=s.nextDouble();
-       if(wid>bal) 
+        wid_amount=s.nextDouble();
+       if(wid_amount>balance) 
         System.out.println("Insufficient balance");
-       else if(bal-Math.abs(wid)<500)
+       else if(balance-Math.abs(wid_amount)<500)
            System.out.println("Invalid withdraw amount\nMaintain min deposit of Rs.500");
        else
-           bal=bal-Math.abs(wid);
+           balance=balance-Math.abs(wid_amount);
            
     }
      
      void enq()
      {
-         System.out.println("The balance amount is : "+bal);
+         System.out.println("The balance amount is : "+balance);
      }
 }
 
