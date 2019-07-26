@@ -30,7 +30,7 @@ class Bankbank
     void deposit()
     {
         
-        System.out.println("Enter the amount to be deposited");
+        System.out.println("Enter the amount you want to deposit");
         dep_amount=s.nextDouble();
         
         balance=balance+dep_amount;
